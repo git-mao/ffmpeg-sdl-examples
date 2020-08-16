@@ -96,6 +96,8 @@ int main(int argc, char *argv[]){
     }
 
     video_buf = (Uint8 *)malloc(tmp_yuv_frame_len);
+    memset(video_buf, 0, tmp_yuv_frame_len);
+    
     if(!video_buf){
         fprintf(stderr, "failed to allocate yuv frame buf\n");
         goto __FAIL;
